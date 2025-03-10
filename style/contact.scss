@@ -1,0 +1,82 @@
+@import "./headerfooter";
+@import "./variables";
+
+@mixin fonts {
+  font-family: "Mulish", sans-serif;
+  font-weight: light;
+  font-optical-sizing: auto;
+}
+
+body {
+  @include fonts;
+
+  margin-left: 125px;
+  margin-right: 125px;
+  max-width: 1110px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+
+  .content {
+    max-width: 45%;
+
+    h2 {
+      font-size: 40px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 16px;
+      opacity: 80%;
+      max-width: 90%;
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 40%;
+
+    input,
+    textarea {
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid $secondary-color;
+
+      &:focus {
+        border-bottom: 3px solid lightblue;
+      }
+    }
+
+    button {
+      background-color: #4a4ff2;
+      color: white;
+      max-width: 125px;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.map-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 110px;
+  iframe {
+    max-width: 100%;
+  }
+}
